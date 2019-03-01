@@ -57,14 +57,14 @@ User created and modified fields behave as follows:
 * modified is always updated
 
 
-.. |pypi| image:: https://img.shields.io/pypi/v/edc-base.svg
-    :target: https://pypi.python.org/pypi/edc-base
+.. |pypi| image:: https://img.shields.io/pypi/v/edc-model.svg
+    :target: https://pypi.python.org/pypi/edc-model
     
-.. |travis| image:: https://travis-ci.org/clinicedc/edc-base.svg?branch=develop
-    :target: https://travis-ci.org/clinicedc/edc-base
+.. |travis| image:: https://travis-ci.org/clinicedc/edc-model.svg?branch=develop
+    :target: https://travis-ci.org/clinicedc/edc-model
     
-.. |codecov| image:: https://codecov.io/gh/clinicedc/edc-base/branch/develop/graph/badge.svg
-  :target: https://codecov.io/gh/clinicedc/edc-base
+.. |codecov| image:: https://codecov.io/gh/clinicedc/edc-model/branch/develop/graph/badge.svg
+  :target: https://codecov.io/gh/clinicedc/edc-model
 
-.. |downloads| image:: https://pepy.tech/badge/edc-base
-   :target: https://pepy.tech/project/edc-base
+.. |downloads| image:: https://pepy.tech/badge/edc-model
+   :target: https://pepy.tech/project/edc-model
