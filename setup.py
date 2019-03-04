@@ -32,7 +32,8 @@ setup(
     keywords='django base models fields forms admin',
     install_requires=[
         "arrow",
-        "django_revision",
+        "django-audit-fields",
+        "django-revision",
         "edc-device",
         "edc-sites",
         "edc-utils",
