@@ -17,6 +17,7 @@ with open(join(dirname(abspath(__file__)), 'requirements.txt')) as f:
 
 # allow setup.py to be run from any path
 os.chdir(normpath(join(abspath(__file__), os.pardir)))
+
 setup(
     name='edc-model',
     version=VERSION,
