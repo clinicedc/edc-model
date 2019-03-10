@@ -1,4 +1,4 @@
-|pypi| |travis| |codecov| |downloads|
+|pypi| |travis| |codecov| |downloads| |pyup|
 
 edc-model
 --------
@@ -64,7 +64,11 @@ User created and modified fields behave as follows:
     :target: https://travis-ci.org/clinicedc/edc-model
     
 .. |codecov| image:: https://codecov.io/gh/clinicedc/edc-model/branch/develop/graph/badge.svg
-  :target: https://codecov.io/gh/clinicedc/edc-model
+    :target: https://codecov.io/gh/clinicedc/edc-model
 
 .. |downloads| image:: https://pepy.tech/badge/edc-model
-   :target: https://pepy.tech/project/edc-model
+    :target: https://pepy.tech/project/edc-model
+
+.. |pyup| image:: https://pyup.io/repos/github/clinicedc/edc-model/shield.svg
+    :target: https://pyup.io/repos/github/clinicedc/edc-model/
+    :alt: Updates
