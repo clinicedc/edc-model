@@ -1,8 +1,5 @@
 all: init docs clean test
 
-env:
-	pip install pytest pytest-cov flake8 coverage black
-
 clean: clean-build clean-pyc
 	rm -fr htmlcov/
 
@@ -18,6 +15,7 @@ clean-pyc:
 
 init:
 	pip install "tox>=1.8" coverage Sphinx
+	pip install pytest pytest-cov flake8 coverage black
 
 test:
 	coverage erase
