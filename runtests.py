@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import django
 import logging
+import os
 import sys
 
 from django.conf import settings
@@ -83,6 +84,26 @@ DEFAULT_SETTINGS = dict(
     MIGRATION_MODULES=DisableMigrations(),
     PASSWORD_HASHERS=('django.contrib.auth.hashers.MD5PasswordHasher', ),
 )
+
+if os.environ.get("TRAVIS"):
+    DEFAULT_SETTINGS.update(DATABASES={
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'edc',
+            'USER': 'travis',
+            'PASSWORD': '',
+            'HOST': 'localhost',
+            'PORT': '',
+        },
+        'client': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'edc_client',
+            'USER': 'travis',
+            'PASSWORD': '',
+            'HOST': 'localhost',
+            'PORT': '',
+        },
+    })
 
 
 def main():

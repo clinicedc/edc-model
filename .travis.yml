@@ -21,6 +21,7 @@ install:
 before_script:
 - flake8 edc_model
 - mysql -e 'create database edc character set utf8;'
+- mysql -e 'create database edc_client character set utf8;'
 
 script:
 - coverage run -m tox
