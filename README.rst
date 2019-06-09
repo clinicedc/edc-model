@@ -1,7 +1,7 @@
 |pypi| |travis| |codecov| |downloads| |pyup|
 
 edc-model
---------
+---------
 
 Base model, manager, field, form and admin classes for Edc. 
 
