@@ -33,7 +33,6 @@ setup(
     keywords='django base models fields forms admin',
     install_requires=[
         "arrow",
-        "django",
         "django-audit-fields",
         "django-extensions",
         "django-revision",
