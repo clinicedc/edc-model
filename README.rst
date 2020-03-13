@@ -60,8 +60,8 @@ User created and modified fields behave as follows:
 .. |pypi| image:: https://img.shields.io/pypi/v/edc-model.svg
     :target: https://pypi.python.org/pypi/edc-model
     
-.. |travis| image:: https://travis-ci.org/clinicedc/edc-model.svg?branch=develop
-    :target: https://travis-ci.org/clinicedc/edc-model
+.. |travis| image:: https://travis-ci.com/clinicedc/edc-model.svg?branch=develop
+    :target: https://travis-ci.com/clinicedc/edc-model
     
 .. |codecov| image:: https://codecov.io/gh/clinicedc/edc-model/branch/develop/graph/badge.svg
     :target: https://codecov.io/gh/clinicedc/edc-model
