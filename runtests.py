@@ -38,6 +38,7 @@ DEFAULT_SETTINGS = DefaultTestSettings(
         "django.contrib.messages",
         "django.contrib.staticfiles",
         "django.contrib.sites",
+        "multisite",
         "edc_device.apps.AppConfig",
         "edc_sites.apps.AppConfig",
         "edc_model.apps.AppConfig",
