@@ -1,9 +1,9 @@
-|pypi| |travis| |codecov| |downloads| |pyup|
+|pypi| |action| |codecov| |downloads| |pyup|
 
 edc-model
 ---------
 
-Base model, manager, field, form and admin classes for Edc. 
+Base model, manager, field, form and admin classes for Edc.
 
 
 
@@ -28,24 +28,24 @@ Most models require an audit trail. If so, add the ``HistoricalRecord`` model ma
 .. code-block:: python
 
     from edc_model.model.models import HistoricalRecord
-    
+
     class MyModel(BaseUuidModel):
-        
+
         ...
         history = HistoricalRecord()
-        
+
 
 ``HistoricalRecord`` is an almost identical version of ``simple_history.models.HistoricalRecord``
-with the exception of two methods:  ``get_extra_fields()`` and ``add_extra_methods()``. Method 
-``get_extra_fields()`` is overridden to change the ``history_id`` primary key from an 
+with the exception of two methods:  ``get_extra_fields()`` and ``add_extra_methods()``. Method
+``get_extra_fields()`` is overridden to change the ``history_id`` primary key from an
 ``IntegerField`` to a ``UUIDField`` so that it can work with module ``django_collect_offline``.
 
 
 The audit trail models created by ``HistoricalRecord`` have a foreign key to ``auth.User``. In order for the models to work with `django_collect_offline` specify the django_collect_offline User model in settings:
-    
+
 .. code-block:: python
 
-    AUTH_USER_MODEL = 'django_collect_offline.User' 
+    AUTH_USER_MODEL = 'django_collect_offline.User'
 
 
 Notes
@@ -59,10 +59,10 @@ User created and modified fields behave as follows:
 
 .. |pypi| image:: https://img.shields.io/pypi/v/edc-model.svg
     :target: https://pypi.python.org/pypi/edc-model
-    
-.. |travis| image:: https://travis-ci.com/clinicedc/edc-model.svg?branch=develop
-    :target: https://travis-ci.com/clinicedc/edc-model
-    
+
+.. |actions| image:: https://github.com/clinicedc/edc-model/workflows/build/badge.svg?branch=develop
+  :target: https://github.com/clinicedc/edc-model/actions?query=workflow:build
+
 .. |codecov| image:: https://codecov.io/gh/clinicedc/edc-model/branch/develop/graph/badge.svg
     :target: https://codecov.io/gh/clinicedc/edc-model
 
