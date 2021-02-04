@@ -1,4 +1,4 @@
-|pypi| |action| |codecov| |downloads| |pyup|
+|pypi| |actions| |codecov| |downloads| |pyup|
 
 edc-model
 ---------
