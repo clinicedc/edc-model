@@ -142,7 +142,7 @@ class TestFieldValidators(TestCase):
                 form = DHDurationForm(data={"duration_dh": string})
                 self.assertFalse(
                     form.is_valid(),
-                    f"Expected DurationDHField to flag error for string '{string}' "
+                    f"Expected DurationDHField to flag error for string '{string}'. "
                     f"Got {form.errors.as_data()}",
                 )
                 self.assertDictEqual(
@@ -160,8 +160,10 @@ class TestFieldValidators(TestCase):
     def test_dh_duration_field_validator_flags_if_gt_7_chars(self):
         expected_mismatches = [
             "12345678",
+            "123456789",
             "0000d00h",
             "000d000h",
+            "0000d0000h",
         ]
         for string in expected_mismatches:
             with self.subTest(string=string):
@@ -175,7 +177,10 @@ class TestFieldValidators(TestCase):
                     form.errors,
                     {
                         "duration_dh": (
-                            ["Ensure this value has at most 7 characters (it has 8)."]
+                            [
+                                "Ensure this value has at most 7 characters "
+                                f"(it has {len(string)})."
+                            ]
                         )
                     },
                 )
