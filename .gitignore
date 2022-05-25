@@ -1,3 +1,6 @@
+.env
+.etc
+_version.py
 .project
 .pydevproject
 .settings/

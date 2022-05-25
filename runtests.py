@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import logging
-import os
 import sys
 from os.path import abspath, dirname
 
@@ -39,7 +38,8 @@ def main():
         settings.configure(**DEFAULT_SETTINGS)
     django.setup()
     tags = [t.split("=")[1] for t in sys.argv if t.startswith("--tag")]
-    failures = DiscoverRunner(failfast=True, tags=tags).run_tests([f"{app_name}.tests"])
+    failfast = True if [t for t in sys.argv if t == "--failfast"] else False
+    failures = DiscoverRunner(failfast=failfast, tags=tags).run_tests([f"{app_name}.tests"])
     sys.exit(failures)
 
 
