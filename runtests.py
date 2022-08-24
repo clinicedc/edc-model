@@ -26,10 +26,12 @@ DEFAULT_SETTINGS = DefaultTestSettings(
         "django.contrib.staticfiles",
         "django.contrib.sites",
         "multisite",
+        "edc_dashboard.apps.AppConfig",
         "edc_device.apps.AppConfig",
         "edc_sites.apps.AppConfig",
         "edc_model.apps.AppConfig",
     ],
+    add_dashboard_middleware=True,
 ).settings
 
 
